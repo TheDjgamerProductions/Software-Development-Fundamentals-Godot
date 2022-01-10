@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/backgroundMusic.wav-e4f677249eaaa9d59ef8739499fe598b.sample"
+
+[deps]
+
+source_file="res://Audio/backgroundMusic.wav"
+dest_files=[ "res://.import/backgroundMusic.wav-e4f677249eaaa9d59ef8739499fe598b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
