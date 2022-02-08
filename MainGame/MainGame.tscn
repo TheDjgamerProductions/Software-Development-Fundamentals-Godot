@@ -36,18 +36,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Border_Left" type="Area2D" parent="." groups=[
-"left",
-]]
+[node name="Border_Left" type="Area2D" parent="." groups=["left"]]
 position = Vector2( -1.53629, 369.479 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
 position = Vector2( -5.37704, -0.768158 )
 shape = SubResource( 1 )
 
-[node name="Border_Right" type="Area2D" parent="." groups=[
-"right",
-]]
+[node name="Border_Right" type="Area2D" parent="." groups=["right"]]
 position = Vector2( 1287.42, 368.711 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
@@ -57,25 +53,17 @@ shape = SubResource( 1 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 642.94, 669.056 )
 
-[node name="Border_Top" type="KinematicBody2D" parent="." groups=[
-"top",
-]]
+[node name="Border_Top" type="KinematicBody2D" parent="." groups=["top"]]
 position = Vector2( 646.934, -31.955 )
 
-[node name="TopCollider" type="CollisionShape2D" parent="Border_Top" groups=[
-"top",
-]]
+[node name="TopCollider" type="CollisionShape2D" parent="Border_Top" groups=["top"]]
 position = Vector2( 0, 1 )
 shape = SubResource( 2 )
 
-[node name="Border_Bottom" type="KinematicBody2D" parent="." groups=[
-"bottom",
-]]
+[node name="Border_Bottom" type="KinematicBody2D" parent="." groups=["bottom"]]
 position = Vector2( 646.934, 748.484 )
 
-[node name="TopCollider" type="CollisionShape2D" parent="Border_Bottom" groups=[
-"top",
-]]
+[node name="TopCollider" type="CollisionShape2D" parent="Border_Bottom" groups=["top"]]
 position = Vector2( 0, 1 )
 shape = SubResource( 2 )
 

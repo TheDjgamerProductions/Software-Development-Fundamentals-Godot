@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://UI/Button.gd" type="Script" id=1]
+[ext_resource path="res://UI/Play_Button.gd" type="Script" id=1]
 
 [node name="Main Menu" type="Control"]
 anchor_right = 1.0
@@ -23,7 +23,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="Play_Button" type="Button" parent="."]
 margin_left = 462.0
 margin_top = 154.0
 margin_right = 778.0
@@ -31,6 +31,9 @@ margin_bottom = 224.0
 rect_pivot_offset = Vector2( 261, 46.6535 )
 text = "play"
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button2" type="Button" parent="."]
 margin_left = 462.0
