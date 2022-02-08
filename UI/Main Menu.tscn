@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://UI/Button.gd" type="Script" id=1]
-[ext_resource path="res://unnamed.png" type="Texture" id=2]
 
 [node name="Main Menu" type="Control"]
 anchor_right = 1.0
@@ -20,7 +19,6 @@ margin_top = 130.476
 margin_right = 1043.69
 margin_bottom = 155.476
 text = "EPIC COOL AMAZING SPACE INVADERS THAT WILL BLOW YOUR MOTHER F-ING SOCKS OFF!"
-percent_visible = -0.015625
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -40,7 +38,3 @@ margin_top = 246.0
 margin_right = 783.0
 margin_bottom = 318.0
 text = "quit cuse i am a loser"
-
-[node name="unnamed" type="Sprite" parent="."]
-position = Vector2( 398, 204.653 )
-texture = ExtResource( 2 )
