@@ -57,7 +57,7 @@ shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 642.94, 669.056 )
-movenent_speed = 1000
+movenent_speed = 500
 
 [node name="Border_Top" type="KinematicBody2D" parent="." groups=[
 "top",
