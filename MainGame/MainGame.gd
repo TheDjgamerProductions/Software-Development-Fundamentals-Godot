@@ -12,7 +12,14 @@ var currentTimer
 func _ready():
 	currentTimer = countdownMax
 	$HUD/Countdown.text = str(currentTimer)
-	
+	while currentTimer != 0:
+		print(currentTimer)
+		yield(get_tree().create_timer(1.0), "timeout")
+		currentTimer = currentTimer - 1 
+		if currentTimer == 0:
+			currentTimer = countdownMax
+			get_tree().change_scene("res://UI/End Screen/End Screen.tscn")
+		$HUD/Countdown.text = str(currentTimer)
 	
 	
 	pass # Replace with function body.
