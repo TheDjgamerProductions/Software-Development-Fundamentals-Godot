@@ -19,7 +19,7 @@ func _ready():
 		if currentTimer == 0:
 			currentTimer = countdownMax
 			get_tree().change_scene("res://UI/End Screen/End Screen.tscn")
-		$HUD/Countdown.text = str(currentTimer)
+		$HUD/Countdown.text = str("Timer: " + currentTimer)
 	
 	
 	pass # Replace with function body.
