@@ -11,7 +11,7 @@ var currentTimer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	currentTimer = countdownMax
-	$HUD/Countdown.text = str(currentTimer)
+	$HUD/Countdown.text = ("Timer: " + str(currentTimer))
 	while currentTimer != 0:
 		print(currentTimer)
 		yield(get_tree().create_timer(1.0), "timeout")
@@ -19,7 +19,7 @@ func _ready():
 		if currentTimer == 0:
 			currentTimer = countdownMax
 			get_tree().change_scene("res://UI/End Screen/End Screen.tscn")
-		$HUD/Countdown.text = str("Timer: " + currentTimer)
+		$HUD/Countdown.text = ("Timer: " + str(currentTimer))
 	
 	
 	pass # Replace with function body.
