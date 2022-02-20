@@ -1,4 +1,4 @@
-extends Button
+extends Control
 
 
 # Declare member variables here. Examples:
@@ -11,15 +11,16 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _pressed():
-	get_tree().change_scene("res://UI/Leaderboard/Leaderboard.tscn")
-
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 
+func _on_Submit_Button_pressed():
+	self.visible = true
+	pass # Replace with function body.
 
 
+func _on_Name_Entry_text_entered(new_text:String):
+	self.visible = true
+	pass # Replace with function body.

@@ -42,10 +42,11 @@ __meta__ = {
 [node name="Quit_button" type="Button" parent="."]
 margin_left = 460.0
 margin_top = 305.0
-margin_right = 781.0
+margin_right = 778.0
 margin_bottom = 377.0
 rect_pivot_offset = Vector2( 161, -85 )
-text = "quit cuse i am a loser"
+theme = ExtResource( 4 )
+text = "Quit"
 script = ExtResource( 3 )
 
 [node name="LeaderBoard_button" type="Button" parent="."]
@@ -53,5 +54,6 @@ margin_left = 463.0
 margin_top = 231.0
 margin_right = 776.0
 margin_bottom = 297.0
+theme = ExtResource( 4 )
 text = "Leaderboard"
 script = ExtResource( 2 )

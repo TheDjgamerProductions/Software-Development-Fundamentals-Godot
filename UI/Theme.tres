@@ -1,6 +1,10 @@
-[gd_resource type="Theme" load_steps=2 format=2]
+[gd_resource type="Theme" load_steps=3 format=2]
 
-[ext_resource path="res://UI/Arial.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI/Arial.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 43
+font_data = ExtResource( 1 )
 
 [resource]
-default_font = ExtResource( 1 )
+default_font = SubResource( 1 )
