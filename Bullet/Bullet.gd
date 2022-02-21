@@ -14,7 +14,9 @@ func _ready():
 
 func _physics_process(delta):
 	var collidedObject = move_and_collide(Vector2(0, -speed*delta))
-	#print(collidedObject)
+	if collidedObject != null:
+		yield(get_tree().create_timer(1.0), "timeout")
+		queue_free()
 
 
 
