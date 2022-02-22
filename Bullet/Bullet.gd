@@ -1,11 +1,8 @@
 extends KinematicBody2D
 var speed = 900
+onready var globalVars = get_node("/root/MainGame")
 
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,7 +13,10 @@ func _physics_process(delta):
 	var collidedObject = move_and_collide(Vector2(0, -speed*delta))
 	if collidedObject != null:
 		yield(get_tree().create_timer(1.0), "timeout")
+		globalVars.Score = globalVars.Score + 1
+		$root/MainGame/HUD/Score.text = ("Score: " + str(globalVars.Score))
 		queue_free()
+		
 
 
 

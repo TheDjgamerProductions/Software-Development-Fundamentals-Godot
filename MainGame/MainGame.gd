@@ -15,9 +15,9 @@ func _ready():
 		$HUD/Countdown.text = ("Timer: " + str(currentTimer))
 		yield(get_tree().create_timer(1.0), "timeout")
 		currentTimer = currentTimer - 1 
-		if currentTimer == 0:
-			currentTimer = countdownMax
-			get_tree().change_scene("res://UI/End Screen/End Screen.tscn")
+	currentTimer = countdownMax
+# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://UI/End Screen/End Screen.tscn")
 
 	
 	
