@@ -14,7 +14,6 @@ func _physics_process(delta):
 	if collidedObject != null:
 		yield(get_tree().create_timer(1.0), "timeout")
 		globalVars.Score = globalVars.Score + 1
-		$root/MainGame/HUD/Score.text = ("Score: " + str(globalVars.Score))
 		queue_free()
 		
 
