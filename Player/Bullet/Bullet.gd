@@ -10,13 +10,14 @@ func _ready():
 	set_physics_process(true)	
 
 func _physics_process(delta):
-	var collidedObject = move_and_collide(Vector2(0, -speed*delta))
-	if collidedObject != null:
-		yield(get_tree().create_timer(1.0), "timeout")
-		Score.Score = Score.Score + 1
-		print(Score.Score)
-		Score.text = ("Score: " + str(Score.Score))
+	if (get_tree().get_current_scene().get_name() != "MainGame"):
 		queue_free()
+	else:
+		var collidedObject = move_and_collide(Vector2(0, -speed*delta))
+		if (collidedObject != null):
+			Score.Score = Score.Score + 1
+			Score.text = ("Score: " + str(Score.Score))
+			queue_free()
 		
 
 
