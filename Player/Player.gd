@@ -1,5 +1,5 @@
 extends KinematicBody2D
-var bulletSource = preload ("res://Bullet/Bullet.tscn")
+var bulletSource = preload ("res://Player/Bullet/Bullet.tscn")
 export(int) var movenent_speed
 
 # Declare member variables here. Examples:

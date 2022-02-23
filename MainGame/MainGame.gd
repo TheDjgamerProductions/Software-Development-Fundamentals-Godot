@@ -1,5 +1,5 @@
 extends Control
-export(int) var Score
+
 export(int) var countdownMax
 var currentTimer
 

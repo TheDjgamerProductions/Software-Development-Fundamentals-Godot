@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://UI/Arial.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Main Menu/LeaderBoard_button.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://UI/End Screen/Submit_Button.gd" type="Script" id=7]
 [ext_resource path="res://UI/End Screen/Buttons.gd" type="Script" id=8]
 [ext_resource path="res://UI/End Screen/Name_Entry.gd" type="Script" id=9]
+[ext_resource path="res://UI/End Screen/Score.gd" type="Script" id=10]
+[ext_resource path="res://UI/Leaderboard/Score_Handler.gd" type="Script" id=11]
 
 [sub_resource type="DynamicFont" id=2]
 size = 94
@@ -39,7 +41,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="."]
+[node name="Score" type="Label" parent="."]
 margin_left = 287.0
 margin_top = 220.0
 margin_right = 966.0
@@ -48,6 +50,7 @@ rect_pivot_offset = Vector2( 359, 66 )
 custom_fonts/font = SubResource( 2 )
 text = "You scored 0"
 align = 1
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -142,6 +145,14 @@ margin_right = 360.0
 margin_bottom = 171.0
 text = "Leaderboard"
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score_Handler" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
