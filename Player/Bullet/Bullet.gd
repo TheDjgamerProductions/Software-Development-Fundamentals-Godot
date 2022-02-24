@@ -15,6 +15,7 @@ func _physics_process(delta):
 	else:
 		var collidedObject = move_and_collide(Vector2(0, -speed*delta))
 		if (collidedObject != null):
+			print(collidedObject)
 			Score.Score = Score.Score + 1
 			Score.text = ("Score: " + str(Score.Score))
 			queue_free()
