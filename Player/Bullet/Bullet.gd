@@ -1,6 +1,5 @@
 extends KinematicBody2D
 var speed = 900
-onready var Score = get_node("/root/MainGame/HUD/Score")
 
 
 
@@ -14,11 +13,12 @@ func _physics_process(delta):
 		queue_free()
 	else:
 		var collidedObject = move_and_collide(Vector2(0, -speed*delta))
-		if (collidedObject != null):
-			Score.Score = Score.Score + 1
-			Score.text = ("Score: " + str(Score.Score))
-			queue_free()
-		
+		if (collidedObject):
+			if ("Enemy" in collidedObject.collider.name):
+				collidedObject.get_collider().queue_free()
+				queue_free()
+			if (collidedObject.collider.name == "Border_Top"):
+				queue_free()		
 
 
 
