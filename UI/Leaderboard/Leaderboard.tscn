@@ -2,7 +2,7 @@
 
 [ext_resource path="res://UI/Arial.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Leaderboard/Back_Button.gd" type="Script" id=2]
-[ext_resource path="res://UI/Leaderboard/Leaderboard_handler.gd" type="Script" id=3]
+[ext_resource path="res://UI/Leaderboard/Leaderboard.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 93
@@ -51,7 +51,6 @@ margin_top = 102.0
 margin_right = 891.0
 margin_bottom = 703.0
 theme = SubResource( 3 )
-items = [ "Blank", null, true ]
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false

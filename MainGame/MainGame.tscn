@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
+[ext_resource path="res://UI/Leaderboard/Score_Handler.gd" type="Script" id=6]
+[ext_resource path="res://UI/Stats/FPS.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
@@ -24,6 +26,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 countdownMax = 100
+
+[node name="Stats" type="VBoxContainer" parent="."]
+margin_left = 1192.77
+margin_top = 15.7155
+margin_right = 1260.77
+margin_bottom = 107.716
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FPS" type="Label" parent="Stats"]
+margin_right = 68.0
+margin_bottom = 14.0
+text = "FPS:"
+script = ExtResource( 7 )
 
 [node name="HUD" type="HBoxContainer" parent="."]
 margin_left = 13.7682
@@ -49,19 +66,16 @@ margin_top = 1.0
 margin_right = 108.0
 margin_bottom = 15.0
 text = "Score: 0"
+script = ExtResource( 6 )
 
-[node name="Border_Left" type="Area2D" parent="." groups=[
-"left",
-]]
+[node name="Border_Left" type="Area2D" parent="." groups=["left"]]
 position = Vector2( -1.53629, 369.479 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
 position = Vector2( -5.37704, -0.768158 )
 shape = SubResource( 1 )
 
-[node name="Border_Right" type="Area2D" parent="." groups=[
-"right",
-]]
+[node name="Border_Right" type="Area2D" parent="." groups=["right"]]
 position = Vector2( 1287.42, 368.711 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
@@ -76,25 +90,17 @@ movenent_speed = 500
 position = Vector2( 0.252197, -32.6865 )
 shape = SubResource( 2 )
 
-[node name="Border_Top" type="KinematicBody2D" parent="." groups=[
-"top",
-]]
+[node name="Border_Top" type="KinematicBody2D" parent="." groups=["top"]]
 position = Vector2( 646.934, -31.955 )
 
-[node name="TopCollider" type="CollisionShape2D" parent="Border_Top" groups=[
-"top",
-]]
+[node name="TopCollider" type="CollisionShape2D" parent="Border_Top" groups=["top"]]
 position = Vector2( 0, 1 )
 shape = SubResource( 3 )
 
-[node name="Border_Bottom" type="KinematicBody2D" parent="." groups=[
-"bottom",
-]]
+[node name="Border_Bottom" type="KinematicBody2D" parent="." groups=["bottom"]]
 position = Vector2( 646.934, 748.484 )
 
-[node name="TopCollider" type="CollisionShape2D" parent="Border_Bottom" groups=[
-"top",
-]]
+[node name="TopCollider" type="CollisionShape2D" parent="Border_Bottom" groups=["top"]]
 position = Vector2( 0, 1 )
 shape = SubResource( 3 )
 
