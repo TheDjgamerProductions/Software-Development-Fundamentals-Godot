@@ -1,5 +1,5 @@
 extends LineEdit
-onready var Leaderboard = get_node("res://UI/Leaderboard/Leaderboard.gd")
+
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -18,6 +18,8 @@ func _ready():
 
 
 func _on_Name_Entry_text_entered(new_text:String):
-	#var name = self.text
-	#Leaderboard.updateList(name, 100)
+	var name = self.text
+	var full = (name + str(GlobalVariables.currentScoringInormation.Score))
+	GlobalVariables.highScoreInfomation.append(full)
+	print(GlobalVariables.highScoreInfomation)
 	self.hide()

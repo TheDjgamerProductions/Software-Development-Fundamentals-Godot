@@ -1,5 +1,5 @@
 extends Label
-onready var Score = get_node("/root/Score_Handler")
+
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -8,7 +8,7 @@ onready var Score = get_node("/root/Score_Handler")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#self.text = (Score.Score)
+	self.text = ("You Scored " + str(GlobalVariables.currentScoringInormation.Score))
 	pass # Replace with function body.
 
 

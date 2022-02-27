@@ -5,6 +5,13 @@ var enemyBulletInstanceCount = 0
 
 
 var currentScoringInormation = {
-	"currentScore": 0,
-	"currentPlayer": "User",
+	"Score": 0,
+	"Player": "User",
 }
+
+var highScoreInfomation = {
+	
+	
+	
+}
+

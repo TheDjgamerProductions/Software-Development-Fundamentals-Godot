@@ -12,7 +12,7 @@ func _ready():
 	pass # Replace with function body.
 func _pressed():
 	#var name = get_parent().text
-	Leaderboard.updateList()
+	#Leaderboard.updateList()
 	print(get_parent().text)
 	get_parent().visible = false
 
