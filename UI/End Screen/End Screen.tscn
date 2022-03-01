@@ -154,6 +154,7 @@ margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="text_entered" from="Name_Entry" to="Name_Entry" method="_on_Name_Entry_text_entered"]
 [connection signal="text_entered" from="Name_Entry" to="Buttons" method="_on_Name_Entry_text_entered"]
 [connection signal="pressed" from="Name_Entry/Submit_Button" to="Buttons" method="_on_Submit_Button_pressed"]

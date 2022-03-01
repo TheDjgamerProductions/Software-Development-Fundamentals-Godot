@@ -19,7 +19,7 @@ func _ready():
 
 func _on_Name_Entry_text_entered(new_text:String):
 	var name = self.text
-	var full = (name + str(GlobalVariables.currentScoringInormation.Score))
+	var full = (str(GlobalVariables.currentScoringInormation.Score) + " " + name)
 	GlobalVariables.highScoreInfomation.append(full)
 	print(GlobalVariables.highScoreInfomation)
 	self.hide()

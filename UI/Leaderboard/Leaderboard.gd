@@ -7,12 +7,12 @@ extends ItemList
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	for i in GlobalVariables.highScoreInfomation:
+		self.add_item(i, null, false)
+	self.sort_items_by_text()
 
 
-func updateList():
-	#var full = (Name + " Points: " + str(Score))
-	add_item("test", null, false)
+
 
 
 

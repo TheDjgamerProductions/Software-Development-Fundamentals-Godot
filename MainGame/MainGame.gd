@@ -10,6 +10,7 @@ var currentTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GlobalVariables.currentScoringInormation.Score = 0
 	currentTimer = countdownMax
 	while currentTimer != 0:
 		$HUD/Countdown.text = ("Timer: " + str(currentTimer))

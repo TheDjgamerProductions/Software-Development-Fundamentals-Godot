@@ -11,9 +11,9 @@ onready var Leaderboard = get_node("res://UI/Leaderboard/Leaderboard.gd")
 func _ready():
 	pass # Replace with function body.
 func _pressed():
-	#var name = get_parent().text
-	#Leaderboard.updateList()
-	print(get_parent().text)
+	var name = get_parent().text
+	var full = (str(GlobalVariables.currentScoringInormation.Score) + " " + name)
+	GlobalVariables.highScoreInfomation.append(full)
 	get_parent().visible = false
 
 	pass

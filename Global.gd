@@ -9,9 +9,7 @@ var currentScoringInormation = {
 	"Player": "User",
 }
 
-var highScoreInfomation = {
-	
-	
-	
-}
+var highScoreInfomation = [
+
+]
 
