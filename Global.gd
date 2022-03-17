@@ -15,5 +15,5 @@ var highScoreInfomation = [
 ]
 
 func _ready():
-	self.loadData()
+	pass
 
