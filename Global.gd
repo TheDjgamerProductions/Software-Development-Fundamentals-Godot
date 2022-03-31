@@ -14,6 +14,14 @@ var highScoreInfomation = [
 
 ]
 
+
+var setings = {
+	"FPS_Counter": true
+
+}
+
+
+
 func _ready():
 	pass
 

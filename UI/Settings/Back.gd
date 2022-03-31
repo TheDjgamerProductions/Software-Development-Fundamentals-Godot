@@ -1,4 +1,4 @@
-extends Label
+extends Button
 
 
 # Declare member variables here. Examples:
@@ -8,12 +8,13 @@ extends Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	self.visible = GlobalVariables.setings.FPS_Counter
-
-func _process(delta):
-	self.text = ("FPS: " + str(Engine.get_frames_per_second()))
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://UI/Main Menu/Main Menu.tscn")

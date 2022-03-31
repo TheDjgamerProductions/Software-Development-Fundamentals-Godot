@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://UI/Theme.tres" type="Theme" id=1]
+[ext_resource path="res://UI/Settings/Back.gd" type="Script" id=2]
+[ext_resource path="res://UI/Arial.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://UI/Settings/FPS_Toggle.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 53
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -9,6 +19,37 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 60.0
+theme = SubResource( 2 )
+text = "Settings"
+align = 1
+
+[node name="Settings" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 110.0
+margin_right = 272.0
+margin_bottom = 150.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+alignment = 1
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/Settings"]
+margin_right = 272.0
+margin_bottom = 40.0
+theme = ExtResource( 1 )
+text = "Show FPS counter"
+align = 2
+script = ExtResource( 4 )
+
 [node name="Button" type="Button" parent="."]
 margin_left = 1.0
 margin_top = 2.0
@@ -16,6 +57,9 @@ margin_right = 147.0
 margin_bottom = 42.0
 theme = ExtResource( 1 )
 text = "Back"
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="VBoxContainer/Settings/CheckButton" to="VBoxContainer/Settings/CheckButton" method="_on_CheckButton_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

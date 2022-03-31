@@ -1,10 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/Main Menu/Play_Button.gd" type="Script" id=1]
 [ext_resource path="res://UI/Main Menu/LeaderBoard_button.gd" type="Script" id=2]
 [ext_resource path="res://UI/Main Menu/Quit_button.gd" type="Script" id=3]
 [ext_resource path="res://UI/Theme.tres" type="Theme" id=4]
 [ext_resource path="res://UI/Main Menu/Settings Button.gd" type="Script" id=5]
+[ext_resource path="res://UI/Arial.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://UI/Main Menu/Text Animation.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 23
+font_data = ExtResource( 6 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
 
 [node name="Main Menu" type="Control"]
 anchor_right = 1.0
@@ -33,23 +42,21 @@ __meta__ = {
 [node name="Label" type="Label" parent="VBoxContainer"]
 margin_right = 1033.0
 margin_bottom = 26.0
-theme = ExtResource( 4 )
+theme = SubResource( 2 )
 text = "EPIC COOL AMAZING SPACE INVADERS THAT WILL BLOW YOUR MOTHER F-ING SOCKS OFF!"
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 181.0
-margin_right = 1033.0
-margin_bottom = 321.0
-custom_constants/separation = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 margin_right = 145.0
-margin_bottom = 140.0
+margin_bottom = 321.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="Play_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Play_Button" type="Button" parent="VBoxContainer/VBoxContainer"]
 margin_right = 145.0
 margin_bottom = 32.0
 rect_pivot_offset = Vector2( 261, 46.6535 )
@@ -60,7 +67,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer"]
 margin_top = 36.0
 margin_right = 145.0
 margin_bottom = 68.0
@@ -71,7 +78,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LeaderBoard_button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="LeaderBoard_button" type="Button" parent="VBoxContainer/VBoxContainer"]
 margin_top = 72.0
 margin_right = 145.0
 margin_bottom = 104.0
@@ -82,7 +89,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Quit_button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Quit_button" type="Button" parent="VBoxContainer/VBoxContainer"]
 margin_top = 108.0
 margin_right = 145.0
 margin_bottom = 140.0
@@ -93,4 +100,10 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/Button" to="VBoxContainer/HBoxContainer/VBoxContainer/Button" method="_on_Button_pressed"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 476.0
+margin_right = 1033.0
+margin_bottom = 476.0
+custom_constants/separation = 0
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Button" to="VBoxContainer/VBoxContainer/Button" method="_on_Button_pressed"]
