@@ -1,5 +1,7 @@
 extends Button
 
+export(String) var scene_to_load
+
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -14,7 +16,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Button_pressed():
-	get_tree().change_scene("res://UI/Settings/Settings.tscn")

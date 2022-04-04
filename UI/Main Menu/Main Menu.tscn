@@ -1,12 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://UI/Main Menu/Play_Button.gd" type="Script" id=1]
-[ext_resource path="res://UI/Main Menu/LeaderBoard_button.gd" type="Script" id=2]
+[ext_resource path="res://UI/Button_Script.gd" type="Script" id=1]
 [ext_resource path="res://UI/Main Menu/Quit_button.gd" type="Script" id=3]
 [ext_resource path="res://UI/Theme.tres" type="Theme" id=4]
-[ext_resource path="res://UI/Main Menu/Settings Button.gd" type="Script" id=5]
 [ext_resource path="res://UI/Arial.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://UI/Main Menu/Text Animation.gd" type="Script" id=7]
+[ext_resource path="res://UI/Main Menu/Main Menu.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 23
@@ -22,6 +21,7 @@ margin_left = 2.94733
 margin_top = -0.105255
 margin_right = 2.94727
 margin_bottom = -0.105225
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -49,14 +49,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+[node name="Buttons" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 181.0
 margin_right = 145.0
 margin_bottom = 321.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="Play_Button" type="Button" parent="VBoxContainer/VBoxContainer"]
+[node name="GameSceneButtons" type="VBoxContainer" parent="VBoxContainer/Buttons"]
+margin_right = 145.0
+margin_bottom = 104.0
+
+[node name="Play_Button" type="Button" parent="VBoxContainer/Buttons/GameSceneButtons"]
 margin_right = 145.0
 margin_bottom = 32.0
 rect_pivot_offset = Vector2( 261, 46.6535 )
@@ -66,30 +70,33 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+scene_to_load = "res://MainGame/MainGame.tscn"
 
-[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer"]
+[node name="Settings_Button" type="Button" parent="VBoxContainer/Buttons/GameSceneButtons"]
 margin_top = 36.0
 margin_right = 145.0
 margin_bottom = 68.0
 theme = ExtResource( 4 )
 text = "Settings"
-script = ExtResource( 5 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+scene_to_load = "res://UI/Settings/Settings.tscn"
 
-[node name="LeaderBoard_button" type="Button" parent="VBoxContainer/VBoxContainer"]
+[node name="LeaderBoard_button" type="Button" parent="VBoxContainer/Buttons/GameSceneButtons"]
 margin_top = 72.0
 margin_right = 145.0
 margin_bottom = 104.0
 theme = ExtResource( 4 )
 text = "Leaderboard"
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+scene_to_load = "res://UI/Leaderboard/Leaderboard.tscn"
 
-[node name="Quit_button" type="Button" parent="VBoxContainer/VBoxContainer"]
+[node name="Quit_button" type="Button" parent="VBoxContainer/Buttons"]
 margin_top = 108.0
 margin_right = 145.0
 margin_bottom = 140.0
@@ -106,4 +113,3 @@ margin_top = 476.0
 margin_right = 1033.0
 margin_bottom = 476.0
 custom_constants/separation = 0
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/Button" to="VBoxContainer/VBoxContainer/Button" method="_on_Button_pressed"]

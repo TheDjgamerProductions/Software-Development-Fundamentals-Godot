@@ -17,7 +17,7 @@ func _ready():
 		yield(get_tree().create_timer(1.0), "timeout")
 		currentTimer = currentTimer - 1 
 	currentTimer = countdownMax
-# warning-ignore:return_value_discarded
+	print("timer end")
 	get_tree().change_scene("res://UI/End Screen/End Screen.tscn")
 
 	

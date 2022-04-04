@@ -1,10 +1,7 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/Arial.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://UI/Main Menu/LeaderBoard_button.gd" type="Script" id=2]
-[ext_resource path="res://UI/Leaderboard/Back_Button.gd" type="Script" id=3]
 [ext_resource path="res://UI/Main Menu/Quit_button.gd" type="Script" id=4]
-[ext_resource path="res://UI/Main Menu/Play_Button.gd" type="Script" id=5]
 [ext_resource path="res://UI/Arial.tres" type="DynamicFont" id=6]
 [ext_resource path="res://UI/End Screen/Submit_Button.gd" type="Script" id=7]
 [ext_resource path="res://UI/End Screen/Buttons.gd" type="Script" id=8]
@@ -69,6 +66,7 @@ __meta__ = {
 }
 
 [node name="Name_Entry" type="LineEdit" parent="."]
+visible = false
 margin_left = 309.0
 margin_top = 507.0
 margin_right = 939.0
@@ -92,7 +90,6 @@ __meta__ = {
 }
 
 [node name="Buttons" type="Control" parent="."]
-visible = false
 margin_left = 426.0
 margin_top = 375.0
 margin_right = 466.0
@@ -108,7 +105,6 @@ margin_top = 171.0
 margin_right = 356.0
 margin_bottom = 247.0
 text = "Back to Main Menu"
-script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -120,7 +116,6 @@ margin_right = 353.0
 margin_bottom = 105.0
 rect_pivot_offset = Vector2( 261, 46.6535 )
 text = "Replay"
-script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -143,7 +138,6 @@ margin_top = 99.0
 margin_right = 360.0
 margin_bottom = 171.0
 text = "Leaderboard"
-script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -154,7 +148,6 @@ margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="text_entered" from="Name_Entry" to="Name_Entry" method="_on_Name_Entry_text_entered"]
 [connection signal="text_entered" from="Name_Entry" to="Buttons" method="_on_Name_Entry_text_entered"]
 [connection signal="pressed" from="Name_Entry/Submit_Button" to="Buttons" method="_on_Submit_Button_pressed"]
