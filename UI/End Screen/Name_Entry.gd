@@ -22,4 +22,4 @@ func _on_Name_Entry_text_entered(new_text:String):
 	var full = (str(GlobalVariables.currentScoringInormation.Score) + " " + name)
 	GlobalVariables.highScoreInfomation.append(full)
 	print(GlobalVariables.highScoreInfomation)
-	self.hide()
+	self.visible = false

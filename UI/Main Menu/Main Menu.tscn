@@ -5,7 +5,7 @@
 [ext_resource path="res://UI/Theme.tres" type="Theme" id=4]
 [ext_resource path="res://UI/Arial.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://UI/Main Menu/Text Animation.gd" type="Script" id=7]
-[ext_resource path="res://UI/Main Menu/Main Menu.gd" type="Script" id=8]
+[ext_resource path="res://UI/Button Handler.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 23
@@ -25,6 +25,7 @@ script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+buttonPath = NodePath("VBoxContainer/Buttons/GameSceneButtons")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
