@@ -29,20 +29,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -321.5
+margin_left = -489.82
 margin_top = -117.0
-margin_right = 321.5
+margin_right = 489.82
 margin_bottom = 117.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Text" type="VBoxContainer" parent="VBoxContainer"]
-margin_right = 643.0
+margin_right = 979.0
 margin_bottom = 206.0
 
 [node name="Label" type="Label" parent="VBoxContainer/Text"]
-margin_right = 643.0
+margin_right = 979.0
 margin_bottom = 96.0
 rect_pivot_offset = Vector2( 359, 66 )
 custom_fonts/font = ExtResource( 6 )
@@ -54,7 +54,7 @@ __meta__ = {
 
 [node name="Score" type="Label" parent="VBoxContainer/Text"]
 margin_top = 100.0
-margin_right = 643.0
+margin_right = 979.0
 margin_bottom = 206.0
 rect_pivot_offset = Vector2( 359, 66 )
 custom_fonts/font = SubResource( 1 )
@@ -67,7 +67,7 @@ __meta__ = {
 
 [node name="Name_Entry" type="LineEdit" parent="VBoxContainer"]
 margin_top = 210.0
-margin_right = 643.0
+margin_right = 979.0
 margin_bottom = 234.0
 custom_constants/minimum_spaces = 144
 placeholder_text = "Enter Your name!"
@@ -79,9 +79,14 @@ __meta__ = {
 }
 
 [node name="Submit_Button" type="Button" parent="VBoxContainer/Name_Entry"]
-margin_left = 586.0
-margin_right = 643.0
-margin_bottom = 24.0
+anchor_left = 1.036
+anchor_top = 0.5
+anchor_right = 1.036
+anchor_bottom = 0.5
+margin_left = -38.244
+margin_top = -12.0
+margin_right = 38.756
+margin_bottom = 12.0
 text = "Submit"
 script = ExtResource( 7 )
 __meta__ = {
@@ -146,6 +151,6 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="text_entered" from="VBoxContainer/Name_Entry" to="VBoxContainer/Buttons" method="_on_Name_Entry_text_entered"]
 [connection signal="text_entered" from="VBoxContainer/Name_Entry" to="VBoxContainer/Name_Entry" method="_on_Name_Entry_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/Name_Entry" to="VBoxContainer/Buttons" method="_on_Name_Entry_text_entered"]
 [connection signal="pressed" from="VBoxContainer/Name_Entry/Submit_Button" to="VBoxContainer/Buttons" method="_on_Submit_Button_pressed"]
