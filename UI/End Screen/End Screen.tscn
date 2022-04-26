@@ -147,6 +147,6 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="text_entered" from="VBoxContainer/Name_Entry" to="VBoxContainer/Name_Entry" method="_on_Name_Entry_text_entered"]
 [connection signal="text_entered" from="VBoxContainer/Name_Entry" to="VBoxContainer/Buttons" method="_on_Name_Entry_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/Name_Entry" to="VBoxContainer/Name_Entry" method="_on_Name_Entry_text_entered"]
 [connection signal="pressed" from="VBoxContainer/Name_Entry/Submit_Button" to="VBoxContainer/Buttons" method="_on_Submit_Button_pressed"]

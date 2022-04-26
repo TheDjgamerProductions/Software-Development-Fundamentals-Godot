@@ -24,7 +24,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-countdownMax = 10
+countdownMax = 9000
 
 [node name="HUD" type="HBoxContainer" parent="."]
 margin_left = 13.7682
@@ -100,7 +100,7 @@ position = Vector2( 0, 1 )
 shape = SubResource( 3 )
 
 [node name="Enemies" type="Node2D" parent="."]
-position = Vector2( 705.16, 3.84076 )
+position = Vector2( 750, 3.841 )
 script = ExtResource( 5 )
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 3 )]
