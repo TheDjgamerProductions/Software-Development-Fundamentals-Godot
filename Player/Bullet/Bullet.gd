@@ -1,5 +1,5 @@
 extends KinematicBody2D
-var speed = 900
+var speed = 500
 onready var Score = get_node("/root/MainGame/HUD/Score")
 
 

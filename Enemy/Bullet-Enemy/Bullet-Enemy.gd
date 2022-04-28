@@ -17,8 +17,9 @@ func _physics_process(delta):
 		#print("Enemy collide: ",collidedObject.collider.name)
 		print(GlobalVariables.enemyBulletInstanceCount)
 		if "Player" in collidedObject.collider.name:
-			GlobalVariables.enemyBulletInstanceCount = 0
-			get_tree().change_scene("res://UI/Fail/Fail.tscn")
+			GlobalVariables.enemyBulletInstanceCount -= 1
+			GlobalVariables.player_health -= 1
+			queue_free()
 		elif "Enemy" or "Bullet" in collidedObject.collider.name:
 			pass
 		if "Border" in collidedObject.collider.name:

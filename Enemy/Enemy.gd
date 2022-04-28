@@ -33,7 +33,7 @@ func _process(delta):
 	while (true):
 		var rng = RandomNumberGenerator.new()
 		rng.randomize()
-		var time = rng.randf_range(1.0, 5.0)
+		var time = rng.randf_range(0.5, 10.0)
 		yield(get_tree().create_timer(time), "timeout")
 		if GlobalVariables.enemyBulletInstanceCount < 5:
 			var bulletInstance = bullet.instance()
