@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var speed = 100
+var speed = 50
 var direction = "right"
 
 
