@@ -15,7 +15,8 @@ func _process(delta):
 		var bulletInstance = bulletSource.instance()
 		bulletInstance.position = Vector2(position.x, position.y-50)
 		get_tree().get_root().add_child(bulletInstance)
-
+	if GlobalVariables.player_health == 0:
+		get_tree().change_scene("res://UI/Fail/Fail.tscn")
 			
 
 

@@ -20,8 +20,8 @@ func _physics_process(delta):
 			GlobalVariables.enemyBulletInstanceCount -= 1
 			GlobalVariables.player_health -= 1
 			queue_free()
-		elif "Enemy" or "Bullet" in collidedObject.collider.name:
-			pass
+		elif "Bullet" in collidedObject.collider.name:
+			collidedObject.get_collider().queue_free()
 		if "Border" in collidedObject.collider.name:
 			GlobalVariables.enemyBulletInstanceCount -= 1
 			queue_free()

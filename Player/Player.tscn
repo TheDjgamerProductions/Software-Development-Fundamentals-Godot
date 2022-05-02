@@ -14,11 +14,13 @@ script = ExtResource( 2 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite"]
-position = Vector2( -5.00004, 15 )
-shape = SubResource( 1 )
+[node name="Area2D" type="Area2D" parent="Sprite"]
+scale = Vector2( 10, 10 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D"]
+position = Vector2( -0.500004, 1.5 )
+scale = Vector2( 0.1, 0.1 )
+shape = SubResource( 1 )
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 margin_left = -32.9688
@@ -30,3 +32,8 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -0.500004, 1.5 )
+scale = Vector2( 0.1, 0.1 )
+shape = SubResource( 1 )

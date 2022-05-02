@@ -18,12 +18,18 @@ func _ready():
 		currentTimer = currentTimer - 1 
 	currentTimer = countdownMax
 	print("timer end")
+	GlobalVariables.winCondition = "Time!"
 	get_tree().change_scene("res://UI/End Screen/End Screen.tscn")
 
 	
 	
 	pass # Replace with function body.
 
+
+func _process(delta):
+	if get_tree().get_nodes_in_group("Enemy").size() == 0:
+		GlobalVariables.winCondition = "Killed all the Enemys"
+		get_tree().change_scene("res://UI/End Screen/End Screen.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

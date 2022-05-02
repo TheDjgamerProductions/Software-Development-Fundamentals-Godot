@@ -23,3 +23,24 @@ func _on_Name_Entry_text_entered(new_text:String):
 	GlobalVariables.highScoreInfomation.append(full)
 	print(GlobalVariables.highScoreInfomation)
 	self.visible = false
+	saveData()
+
+
+func _on_Submit_Button_pressed():
+	var name = self.text
+	var full = (str(GlobalVariables.currentScoringInormation.Score) + " " + name)
+	GlobalVariables.highScoreInfomation.append(full)
+	print(GlobalVariables.highScoreInfomation)
+	self.visible = false
+	saveData()
+	
+	
+func saveData():
+	var file = File.new()
+	var error = file.open(GlobalVariables.saveFile, file.WRITE)
+	if error == OK:
+		file.store_var(GlobalVariables.highScoreInfomation)
+		file.close()
+		print("saved")
+	else:
+		print("did not save")

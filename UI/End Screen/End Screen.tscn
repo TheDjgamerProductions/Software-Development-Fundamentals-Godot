@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://UI/Arial.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Button Handler.gd" type="Script" id=2]
 [ext_resource path="res://UI/Button_Script.gd" type="Script" id=3]
 [ext_resource path="res://UI/Main Menu/Quit_button.gd" type="Script" id=4]
+[ext_resource path="res://UI/End Screen/Text.gd" type="Script" id=5]
 [ext_resource path="res://UI/Arial.tres" type="DynamicFont" id=6]
-[ext_resource path="res://UI/End Screen/Submit_Button.gd" type="Script" id=7]
 [ext_resource path="res://UI/End Screen/Buttons.gd" type="Script" id=8]
 [ext_resource path="res://UI/End Screen/Name_Entry.gd" type="Script" id=9]
 [ext_resource path="res://UI/End Screen/Score.gd" type="Script" id=10]
@@ -13,6 +13,34 @@
 [sub_resource type="DynamicFont" id=1]
 size = 94
 font_data = ExtResource( 1 )
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Button
+onready var Leaderboard = get_node(\"res://UI/Leaderboard/Leaderboard.gd\")
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+func _pressed():
+	var name = get_parent().text
+	var full = (str(GlobalVariables.currentScoringInormation.Score) + \" \" + name)
+	GlobalVariables.highScoreInfomation.append(full)
+	print(GlobalVariables.highScoreInfomation)
+	get_parent().visible = false
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+"
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -48,6 +76,7 @@ rect_pivot_offset = Vector2( 359, 66 )
 custom_fonts/font = ExtResource( 6 )
 text = "TIME!"
 align = 1
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -84,7 +113,7 @@ margin_top = 1.0
 margin_right = 977.0
 margin_bottom = 12.0
 text = "Submit"
-script = ExtResource( 7 )
+script = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -147,6 +176,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="text_entered" from="VBoxContainer/Name_Entry" to="VBoxContainer/Buttons" method="_on_Name_Entry_text_entered"]
 [connection signal="text_entered" from="VBoxContainer/Name_Entry" to="VBoxContainer/Name_Entry" method="_on_Name_Entry_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/Name_Entry" to="VBoxContainer/Buttons" method="_on_Name_Entry_text_entered"]
+[connection signal="pressed" from="VBoxContainer/Name_Entry/Submit_Button" to="VBoxContainer/Name_Entry" method="_on_Submit_Button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Name_Entry/Submit_Button" to="VBoxContainer/Buttons" method="_on_Submit_Button_pressed"]
