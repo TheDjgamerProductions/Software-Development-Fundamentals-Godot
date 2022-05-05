@@ -14,13 +14,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Submit_Button_pressed():
-	self.visible = true
-	pass # Replace with function body.
-
-
-func _on_Name_Entry_text_entered(new_text:String):
-	self.visible = true
-	pass # Replace with function body.
