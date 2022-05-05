@@ -10,6 +10,7 @@ var currentTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GlobalVariables.player_health = 3
 	GlobalVariables.currentScoringInormation.Score = 0
 	currentTimer = countdownMax
 	while currentTimer != 0:
