@@ -19,3 +19,5 @@ func _ready():
 func _on_CheckButton_pressed():
 	GlobalVariables.setings.FPS_Counter = self.pressed
 	print(GlobalVariables.setings.FPS_Counter)
+
+

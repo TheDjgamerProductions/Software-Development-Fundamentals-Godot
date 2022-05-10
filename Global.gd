@@ -19,7 +19,10 @@ var highScoreInfomation = [
 
 
 var setings = {
-	"FPS_Counter": true
+	"FPS_Counter": true,
+	"Difficulty": "Easy"
+
+
 
 }
 

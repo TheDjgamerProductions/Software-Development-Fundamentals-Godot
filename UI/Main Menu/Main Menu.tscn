@@ -46,6 +46,7 @@ margin_right = 1033.0
 margin_bottom = 26.0
 theme = SubResource( 2 )
 text = "EPIC COOL AMAZING SPACE INVADERS THAT WILL BLOW YOUR MOTHER F-ING SOCKS OFF!"
+align = 1
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false

@@ -18,4 +18,17 @@ func _ready():
 
 func _on_Clear_pressed():
 	GlobalVariables.highScoreInfomation.clear()
+	saveData()
 	pass # Replace with function body.
+
+
+
+func saveData():
+	var file = File.new()
+	var error = file.open(GlobalVariables.saveFile, file.WRITE)
+	if error == OK:
+		file.store_var(GlobalVariables.highScoreInfomation)
+		print(file.get_var())
+		file.close()
+	else:
+		print("did not save")
