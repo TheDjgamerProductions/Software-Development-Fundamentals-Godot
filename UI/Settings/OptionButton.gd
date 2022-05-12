@@ -8,7 +8,7 @@ extends OptionButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	self.text = GlobalVariables.setings["Difficulty"]
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,6 +17,4 @@ func _ready():
 
 
 func _on_OptionButton_item_selected(id):
-	print (self.selected)
-	GlobalVariables.setings["Difficulty"] = "test"
-	print(GlobalVariables.setings["Difficulty"])
+	GlobalVariables.setings["Difficulty"] = self.text

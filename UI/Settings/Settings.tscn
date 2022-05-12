@@ -1,14 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://UI/Theme.tres" type="Theme" id=1]
 [ext_resource path="res://UI/Settings/Back.gd" type="Script" id=2]
 [ext_resource path="res://UI/Arial.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://UI/Settings/FPS_Toggle.gd" type="Script" id=4]
-[ext_resource path="res://videoplayback.webm" type="VideoStream" id=5]
-[ext_resource path="res://UI/Settings/VideoPlayer.gd" type="Script" id=6]
-[ext_resource path="res://UI/Settings/Button2.gd" type="Script" id=7]
-[ext_resource path="res://Audio/Rick.ogg" type="AudioStream" id=8]
-[ext_resource path="res://UI/Settings/AudioStreamPlayer.gd" type="Script" id=9]
 [ext_resource path="res://UI/Settings/OptionButton.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFont" id=1]
@@ -97,39 +92,6 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="VideoPlayer" type="VideoPlayer" parent="."]
-margin_left = 307.827
-margin_top = 122.819
-margin_right = 668.827
-margin_bottom = 324.819
-rect_pivot_offset = Vector2( 663.173, 120.233 )
-stream = ExtResource( 5 )
-volume_db = 7.91
-expand = false
-buffering_msec = 10
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button2" type="Button" parent="VideoPlayer"]
-margin_left = -162.316
-margin_top = 109.842
-margin_right = -150.316
-margin_bottom = 129.842
-text = "Play"
-script = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VideoPlayer"]
-stream = ExtResource( 8 )
-script = ExtResource( 9 )
 [connection signal="pressed" from="VBoxContainer/Settings/CheckButton" to="VBoxContainer/Settings/CheckButton" method="_on_CheckButton_pressed"]
 [connection signal="item_selected" from="VBoxContainer/Settings/HBoxContainer/OptionButton" to="VBoxContainer/Settings/HBoxContainer/OptionButton" method="_on_OptionButton_item_selected"]
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
-[connection signal="pressed" from="VideoPlayer/Button2" to="VideoPlayer/AudioStreamPlayer" method="_on_Button2_pressed"]
-[connection signal="pressed" from="VideoPlayer/Button2" to="VBoxContainer/Settings/CheckButton" method="_on_Button2_pressed"]
-[connection signal="pressed" from="VideoPlayer/Button2" to="VideoPlayer/Button2" method="_on_Button2_pressed"]

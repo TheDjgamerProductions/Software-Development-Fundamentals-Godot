@@ -13,7 +13,14 @@ var direction = "right"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_physics_process(true)
-
+	if GlobalVariables.setings["Difficulty"] == "Easy":
+		speed = -50
+	elif GlobalVariables.setings["Difficulty"] == "Medium":
+		speed = -100
+	elif GlobalVariables.setings["Difficulty"] == "Hard":
+		speed = -150
+	elif GlobalVariables.setings["Difficulty"] == "GOD":
+		speed = -500
 
 
 
