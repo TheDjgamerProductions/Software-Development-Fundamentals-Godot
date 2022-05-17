@@ -1,3 +1,7 @@
+# This script is used for controlling the enemys
+
+
+
 extends KinematicBody2D
 
 var bullet = preload("res://Enemy/Bullet-Enemy/Bullet-Enemy.tscn")

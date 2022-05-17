@@ -1,3 +1,8 @@
+# This script is the main game scirpt. This sciprt runs when the main game is loaded
+# This script handles the timer in the game and ending the game when there are no emenys left
+
+
+
 extends Control
 
 export(int) var countdownMax

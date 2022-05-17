@@ -1,3 +1,12 @@
+# This script is the main player script.
+# This scipt handles:
+# Player movment
+# Player Fireing
+# And Loop around when the players goes off screen
+#
+
+
+
 extends KinematicBody2D
 var bulletSource = preload ("res://Player/Bullet/Bullet.tscn")
 export(int) var movenent_speed

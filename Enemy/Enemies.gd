@@ -1,3 +1,6 @@
+# This script is used to move the Enemy group
+
+
 extends Node2D
 
 
