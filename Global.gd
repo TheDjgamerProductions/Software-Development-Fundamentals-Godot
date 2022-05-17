@@ -13,9 +13,18 @@ var currentScoringInormation = {
 	"Player": "User",
 }
 
-var highScoreInfomation = [
+var highScoreInfomation = {
+	"Easy": [],
+	"Medium": [],
+	"Hard": [],
+	"GOD": []
+	
+	
+	
+	
+}
 
-]
+
 
 
 var setings = {
@@ -29,5 +38,10 @@ var setings = {
 
 
 func _ready():
+	var file = File.new()
+	var error = file.open(GlobalVariables.saveFile, File.READ)
+	if error == OK:
+		GlobalVariables.highScoreInfomation = file.get_var()
+		file.close()
 	pass
 

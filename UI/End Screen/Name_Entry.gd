@@ -20,7 +20,7 @@ func _ready():
 func _on_Name_Entry_text_entered(new_text:String):
 	var name = self.text
 	var full = (str(GlobalVariables.currentScoringInormation.Score) + " " + name)
-	GlobalVariables.highScoreInfomation.append(full)
+	GlobalVariables.highScoreInfomation[GlobalVariables.setings["Difficulty"]].append(full)
 	print(GlobalVariables.highScoreInfomation)
 	self.visible = false
 	saveData()
@@ -29,8 +29,8 @@ func _on_Name_Entry_text_entered(new_text:String):
 func _on_Submit_Button_pressed():
 	var name = self.text
 	var full = (str(GlobalVariables.currentScoringInormation.Score) + " " + name)
-	GlobalVariables.highScoreInfomation.append(full)
-	print(GlobalVariables.highScoreInfomation)
+	GlobalVariables.highScoreInfomation[GlobalVariables.setings["Difficulty"]].append(full)
+	
 	self.visible = false
 	saveData()
 	
