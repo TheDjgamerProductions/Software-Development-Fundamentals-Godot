@@ -1,3 +1,6 @@
+# This script is used to show the buttons that are used to change scenes when the player enters the name
+
+
 extends Control
 
 

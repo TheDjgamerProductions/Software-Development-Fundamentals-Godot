@@ -1,3 +1,6 @@
+# This scipt is used for the toggle of the FPS counter inside the main game
+
+
 extends CheckButton
 
 

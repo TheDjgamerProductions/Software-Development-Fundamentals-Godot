@@ -1,3 +1,6 @@
+# This script is used to add the score to the leaderboard with the name enterd inside the text entry that this script is connect to
+
+
 extends LineEdit
 
 

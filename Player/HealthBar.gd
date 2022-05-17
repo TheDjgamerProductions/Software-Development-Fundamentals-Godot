@@ -1,3 +1,6 @@
+# This script is used to update the player's health bar
+
+
 extends ProgressBar
 
 

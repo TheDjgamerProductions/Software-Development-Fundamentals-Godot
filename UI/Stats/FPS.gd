@@ -1,3 +1,6 @@
+# This script is used for the text label showing the FPS inside the game
+
+
 extends Label
 
 

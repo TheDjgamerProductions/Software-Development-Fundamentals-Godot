@@ -1,3 +1,6 @@
+# This scirpt is used for adding leaderboard entrys into the list
+
+
 extends ItemList
 
 # Declare member variables here. Examples:
