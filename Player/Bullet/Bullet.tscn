@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Audio/bulletFire.wav" type="AudioStream" id=1]
+[ext_resource path="res://Audio/Bruh - Sound Effect (HD).ogg" type="AudioStream" id=1]
 [ext_resource path="res://Images/bullet.png" type="Texture" id=2]
 [ext_resource path="res://Player/Bullet/Bullet.gd" type="Script" id=3]
 
