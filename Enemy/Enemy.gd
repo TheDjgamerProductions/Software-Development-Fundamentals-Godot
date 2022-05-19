@@ -65,7 +65,9 @@ func _on_Area2D_area_entered(area):
 		elif GlobalVariables.setings["Difficulty"] == "GOD":
 			get_parent().speed = 500
 		get_parent().global_position.y += 10
-		
+
+
+# On every frame refresh, generate a ran number to use for the wait time between bullet fireing	
 func _process(delta):
 	while (true):
 		var rng = RandomNumberGenerator.new()

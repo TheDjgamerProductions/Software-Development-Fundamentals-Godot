@@ -15,7 +15,7 @@ func _ready():
 	set_physics_process(true)	
 
 func _physics_process(delta):
-	if (get_tree().get_current_scene().get_name() != "MainGame"):
+	if (get_tree().get_current_scene().get_name() != "MainGame"): #Remove bullet if not on main game
 		queue_free()
 	else:
 		var collidedObject = move_and_collide(Vector2(0, -speed*delta))

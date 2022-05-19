@@ -19,11 +19,10 @@ func _ready():
 	GlobalVariables.player_health = 3
 	GlobalVariables.currentScoringInormation.Score = 0
 	currentTimer = countdownMax
-	while currentTimer != 0:
-		$HUD/Countdown.text = ("Timer: " + str(currentTimer))
-		yield(get_tree().create_timer(1.0), "timeout")
+	while currentTimer != 0: #While timer does not equal 0
+		$HUD/Countdown.text = ("Timer: " + str(currentTimer)) #Update timer text to current timer
+		yield(get_tree().create_timer(1.0), "timeout") #Wait 1 sec
 		currentTimer = currentTimer - 1 
-	currentTimer = countdownMax
 	print("timer end")
 	GlobalVariables.winCondition = "Time!"
 	get_tree().change_scene("res://UI/End Screen/End Screen.tscn")
