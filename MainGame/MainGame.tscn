@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
+[ext_resource path="res://Audio/Rick.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
@@ -17,9 +17,9 @@ extents = Vector2( 38.4993, 49.4675 )
 extents = Vector2( 662.058, 10 )
 
 [node name="MainGame" type="Control"]
-margin_left = -1.76819
+margin_left = -1.25482
 margin_top = 2.28448
-margin_right = 1278.23
+margin_right = 1278.74
 margin_bottom = 722.285
 script = ExtResource( 4 )
 __meta__ = {
@@ -203,6 +203,7 @@ position = Vector2( -472.219, 404.428 )
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
 autoplay = true
+attenuation = 0.0507658
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 1205.77

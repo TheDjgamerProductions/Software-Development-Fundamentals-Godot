@@ -13,7 +13,7 @@ func _ready():
 
 
 func _pressed():
-	print("Quit ")
+	print("Quit")
 	get_tree().quit()
 	pass
 

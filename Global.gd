@@ -18,10 +18,6 @@ var highScoreInfomation = {
 	"Medium": [],
 	"Hard": [],
 	"GOD": []
-	
-	
-	
-	
 }
 
 

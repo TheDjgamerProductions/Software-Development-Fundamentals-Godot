@@ -4,9 +4,6 @@
 extends LineEdit
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,24 +12,21 @@ func _ready():
 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _on_Name_Entry_text_entered(new_text:String):
-	var name = self.text
-	var full = (str(GlobalVariables.currentScoringInormation.Score) + " " + name)
-	GlobalVariables.highScoreInfomation[GlobalVariables.setings["Difficulty"]].append(full)
+	var name = self.text #Sets var with the text entered in the text box
+	var full = (str(GlobalVariables.currentScoringInormation.Score) + " " + name) #Combines the score with the name entered and save to a var
+	GlobalVariables.highScoreInfomation[GlobalVariables.setings["Difficulty"]].append(full) #Addes the full var to the currnet Difficulty leaderboard
 	print(GlobalVariables.highScoreInfomation)
 	self.visible = false
 	saveData()
 
 
 func _on_Submit_Button_pressed():
-	var name = self.text
-	var full = (str(GlobalVariables.currentScoringInormation.Score) + " " + name)
-	GlobalVariables.highScoreInfomation[GlobalVariables.setings["Difficulty"]].append(full)
+	var name = self.text #Sets var with the text entered in the text box
+	var full = (str(GlobalVariables.currentScoringInormation.Score) + " " + name) #Combines the score with the name entered and save to a var
+	GlobalVariables.highScoreInfomation[GlobalVariables.setings["Difficulty"]].append(full) #Addes the full var to the currnet Difficulty leaderboard
 	
 	self.visible = false
 	saveData()

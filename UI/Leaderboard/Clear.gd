@@ -17,7 +17,13 @@ func _ready():
 
 
 func _on_Clear_pressed():
-	GlobalVariables.highScoreInfomation.clear()
+	GlobalVariables.highScoreInfomation = { #Set the leaderboard to defualt
+	"Easy": [],
+	"Medium": [],
+	"Hard": [],
+	"GOD": []
+	}
+	print(GlobalVariables.highScoreInfomation)
 	saveData()
 	pass # Replace with function body.
 

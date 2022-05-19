@@ -17,6 +17,7 @@ var maxBullet
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#Set stats based on Difficulty
 	if GlobalVariables.setings["Difficulty"] == "Easy":
 		timeMin = 1
 		timeMax = 10
@@ -44,7 +45,7 @@ func _ready():
 
 
 func _on_Area2D_area_entered(area):
-	if area.is_in_group("right"):
+	if area.is_in_group("right"): #If colide with right side of screen bounce
 		get_parent().global_position.y += 10
 		if GlobalVariables.setings["Difficulty"] == "Easy":
 			get_parent().speed = -50
@@ -54,8 +55,7 @@ func _on_Area2D_area_entered(area):
 			get_parent().speed = -150
 		elif GlobalVariables.setings["Difficulty"] == "GOD":
 			get_parent().speed = -500
-		
-	if area.is_in_group("left"):
+	if area.is_in_group("left"): #If colide with left side of screen bounce
 		if GlobalVariables.setings["Difficulty"] == "Easy":
 			get_parent().speed = 50
 		elif GlobalVariables.setings["Difficulty"] == "Medium":

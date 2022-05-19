@@ -27,6 +27,7 @@ func _physics_process(delta):
 				Score.text = ("Score: " + str(GlobalVariables.currentScoringInormation.Score))
 			if ("Border" in collidedObject.collider.name):
 				queue_free()
+
 			
 
 
