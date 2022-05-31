@@ -6,6 +6,8 @@ extends KinematicBody2D
 
 var bullet = preload("res://Enemy/Bullet-Enemy/Bullet-Enemy.tscn")
 
+export(bool) var canShoot = false
+
 var timeMin
 var timeMax
 var maxBullet
@@ -69,7 +71,7 @@ func _on_Area2D_area_entered(area):
 
 # On every frame refresh, generate a ran number to use for the wait time between bullet fireing	
 func _process(delta):
-	while (true):
+	if canShoot:
 		var rng = RandomNumberGenerator.new()
 		rng.randomize()
 		var time = rng.randf_range(timeMin, timeMax)
